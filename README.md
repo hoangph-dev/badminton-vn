@@ -1,6 +1,6 @@
 # badminton_vn
 
-Landing page cho kênh TikTok **badminton_vn** (highlight trận đấu cầu lông) kèm danh sách đồ cầu lông theo mô hình affiliate (Shopee / TikTok Shop).
+Landing page cho kênh TikTok **badminton_vn** (highlight trận đấu cầu lông) kèm danh sách đồ cầu lông theo mô hình affiliate (TikTok Shop).
 
 Stack: Next.js 16 (App Router) · React 19 · Tailwind CSS v4 · shadcn/ui.
 
@@ -21,7 +21,7 @@ Toàn bộ nội dung nằm trong `src/data/` (tìm các comment `TODO`):
 | --- | --- |
 | `src/data/site.ts` | Tên kênh, handle/URL TikTok, mạng xã hội, số liệu hero, lịch đăng, email liên hệ |
 | `src/data/videos.ts` | Danh sách video TikTok (URL dạng `https://www.tiktok.com/@user/video/<id>`). `featured: true` = video ở hero |
-| `src/data/products.ts` | Sản phẩm: danh mục, trình độ, giá, nhận xét, tag, link affiliate Shopee / TikTok Shop |
+| `src/data/products.ts` | Sản phẩm: danh mục, trình độ, giá, nhận xét, tag, link TikTok Shop |
 
 Ảnh sản phẩm: đặt vào `public/products/` và khai báo `image: "/products/ten-anh.jpg"`. Để trống sẽ hiện ảnh placeholder.
 

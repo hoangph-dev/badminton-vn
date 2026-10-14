@@ -22,11 +22,11 @@ export type Product = {
   image?: string;
   note: string;
   tags: string[];
-  /** Link affiliate */
-  links: { shopee?: string; tiktokShop?: string };
+  /** Link sản phẩm trên TikTok Shop */
+  links: { tiktokShop?: string };
 };
 
-// TODO: thay bằng sản phẩm + link affiliate thật.
+// TODO: thay bằng sản phẩm + link TikTok Shop thật.
 export const products: Product[] = [
   {
     id: "vot-cong-cong",
@@ -36,7 +36,7 @@ export const products: Product[] = [
     priceRange: "1.500.000 – 2.200.000đ",
     note: "Cây vợt kênh dùng nhiều nhất khi quay đánh đôi. Cân bằng, dễ điều cầu.",
     tags: ["Kênh đang dùng"],
-    links: { shopee: "https://shopee.vn/", tiktokShop: "https://www.tiktok.com/" },
+    links: { tiktokShop: "https://www.tiktok.com/" },
   },
   {
     id: "vot-nguoi-moi",
@@ -46,7 +46,7 @@ export const products: Product[] = [
     priceRange: "450.000 – 700.000đ",
     note: "Nhẹ tay, đầu vợt mềm, giúp làm quen kỹ thuật mà không mỏi cổ tay.",
     tags: ["Cho người mới", "Dưới 1 triệu"],
-    links: { shopee: "https://shopee.vn/" },
+    links: { tiktokShop: "https://www.tiktok.com/@badminton_vn3" },
   },
   {
     id: "vot-tan-cong",
@@ -56,7 +56,7 @@ export const products: Product[] = [
     priceRange: "3.000.000 – 4.500.000đ",
     note: "Smash uy lực, phù hợp người đã có lực cổ tay tốt.",
     tags: ["Tấn công"],
-    links: { shopee: "https://shopee.vn/", tiktokShop: "https://www.tiktok.com/" },
+    links: { tiktokShop: "https://www.tiktok.com/" },
   },
   {
     id: "giay-bam-san",
@@ -66,7 +66,7 @@ export const products: Product[] = [
     priceRange: "900.000 – 1.400.000đ",
     note: "Đế bám tốt trên sân thảm, đệm gót êm khi bật nhảy.",
     tags: ["Kênh đang dùng"],
-    links: { shopee: "https://shopee.vn/" },
+    links: { tiktokShop: "https://www.tiktok.com/@badminton_vn3" },
   },
   {
     id: "giay-gia-re",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     priceRange: "280.000 – 350.000đ",
     note: "Bay ổn định, bền, loại kênh dùng khi quay các trận giao hữu.",
     tags: ["Kênh đang dùng"],
-    links: { shopee: "https://shopee.vn/", tiktokShop: "https://www.tiktok.com/" },
+    links: { tiktokShop: "https://www.tiktok.com/" },
   },
   {
     id: "balo-2-ngan",
@@ -96,7 +96,7 @@ export const products: Product[] = [
     priceRange: "400.000 – 650.000đ",
     note: "Đựng được 2–3 vợt, ngăn giày riêng thoáng khí.",
     tags: ["Dưới 1 triệu"],
-    links: { shopee: "https://shopee.vn/" },
+    links: { tiktokShop: "https://www.tiktok.com/@badminton_vn3" },
   },
   {
     id: "quan-can",
@@ -106,6 +106,6 @@ export const products: Product[] = [
     priceRange: "60.000 – 120.000đ",
     note: "Thấm mồ hôi tốt, thay 2 tuần/lần là cầm vợt chắc tay.",
     tags: ["Dưới 1 triệu"],
-    links: { shopee: "https://shopee.vn/", tiktokShop: "https://www.tiktok.com/" },
+    links: { tiktokShop: "https://www.tiktok.com/" },
   },
 ];

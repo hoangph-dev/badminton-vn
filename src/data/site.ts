@@ -4,7 +4,7 @@ export const site = {
   tagline: "Những trận cầu lông BWF đỉnh cao, cắt gọn cho bạn xem",
   description:
     "Kênh TikTok cắt các trận đấu hay nhất từ những giải BWF lớn: Momota, Lee Chong Wei, Lin Dan… Kèm đồ cầu lông kênh đang dùng.",
-  url: "https://badminton.vn", // TODO: domain thật
+  url: "https://badminton-vn.devcraft.io.vn",
   tiktok: {
     handle: "@badminton_vn3",
     url: "https://www.tiktok.com/@badminton_vn3",

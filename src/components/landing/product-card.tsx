@@ -7,7 +7,7 @@ import type { Product } from "@/data/products";
 import { LogoMark } from "./logo";
 
 export function ProductCard({ product }: { product: Product }) {
-  const { shopee, tiktokShop } = product.links;
+  const { tiktokShop } = product.links;
 
   return (
     <Card id={`sp-${product.id}`} className="scroll-mt-20 gap-3 pt-0">
@@ -50,18 +50,11 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="font-semibold text-primary">{product.priceRange}</p>
         <p className="text-muted-foreground">{product.note}</p>
       </CardContent>
-      <CardFooter className="flex flex-col gap-2 border-t bg-muted/40 py-3 sm:flex-row">
-        {shopee && (
-          <Button asChild className="w-full sm:flex-1">
-            <a href={shopee} target="_blank" rel="sponsored noopener noreferrer">
-              Shopee <ExternalLink />
-            </a>
-          </Button>
-        )}
+      <CardFooter className="border-t bg-muted/40 py-3">
         {tiktokShop && (
-          <Button asChild variant="outline" className="w-full sm:flex-1">
+          <Button asChild className="w-full">
             <a href={tiktokShop} target="_blank" rel="sponsored noopener noreferrer">
-              TikTok Shop <ExternalLink />
+              Mua trên TikTok Shop <ExternalLink />
             </a>
           </Button>
         )}

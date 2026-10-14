@@ -5,7 +5,7 @@ import { SectionHeading } from "./section-heading";
 const faqs = [
   {
     q: "Mua qua link của kênh có đắt hơn không?",
-    a: "Không. Giá bạn trả giống hệt khi tự tìm trên Shopee / TikTok Shop. Kênh nhận một khoản hoa hồng nhỏ từ sàn để duy trì việc quay video.",
+    a: "Không. Giá bạn trả giống hệt khi tự tìm trên TikTok Shop. Kênh nhận một khoản hoa hồng nhỏ từ sàn để duy trì việc quay video.",
   },
   {
     q: "Đồ trong danh sách có phải kênh dùng thật không?",

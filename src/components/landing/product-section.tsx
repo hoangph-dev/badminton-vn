@@ -31,7 +31,7 @@ export function ProductSection() {
         <SectionHeading
           eyebrow="Đồ cầu lông"
           title="Đồ kênh đang dùng & tin dùng"
-          description="Danh sách được chọn từ chính những trận kênh quay. Bấm để xem giá mới nhất trên Shopee hoặc TikTok Shop."
+          description="Danh sách được chọn từ chính những trận kênh quay. Bấm để xem giá mới nhất trên TikTok Shop."
         />
         <div
           role="tablist"
