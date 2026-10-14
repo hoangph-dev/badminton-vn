@@ -1,8 +1,7 @@
 export const videoCategories = [
-  "Pha cầu đẹp",
-  "Giải phong trào",
-  "Phân tích Pro",
-  "Mẹo kỹ thuật",
+  "Momota – Lee Chong Wei",
+  "Momota – Lin Dan",
+  "Momota",
 ] as const;
 
 export type VideoCategory = (typeof videoCategories)[number];
@@ -16,40 +15,45 @@ export type Video = {
   featured?: boolean;
 };
 
-// TODO: thay bằng URL video thật của kênh.
+// Video thật từ @badminton_vn3. Thêm video mới: dán URL + tiêu đề vào đây.
 export const videos: Video[] = [
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000001",
-    title: "Pha cứu cầu không tưởng ở set 3",
-    category: "Pha cầu đẹp",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7693924050099342593",
+    title: "Kento Momota vs Lee Chong Wei – trận đấu hay nhất mình từng xem",
+    category: "Momota – Lee Chong Wei",
     featured: true,
   },
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000002",
-    title: "Chung kết đôi nam giải phong trào Hà Nội",
-    category: "Giải phong trào",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7691713970973035783",
+    title: "Khi 2 quái vật của làng cầu lông thế giới khởi động",
+    category: "Momota – Lee Chong Wei",
   },
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000003",
-    title: "Vì sao cú smash này ăn điểm? Phân tích chậm",
-    category: "Phân tích Pro",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7691720928346000646",
+    title: "Momota vs Lee Chong Wei – 11 điểm đầu",
+    category: "Momota – Lee Chong Wei",
   },
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000004",
-    title: "3 lỗi cầm vợt người mới hay mắc",
-    category: "Mẹo kỹ thuật",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7694268292093054260",
+    title: "Những điểm cuối căng thẳng – Momota có lật được thế trận?",
+    category: "Momota – Lee Chong Wei",
   },
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000005",
-    title: "Rally 60 chạm cầu đôi nữ",
-    category: "Pha cầu đẹp",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7695002231510207750",
+    title: "Momota vs Lin Dan – màn khởi động của 2 tay vợt đơn nam mạnh nhất lịch sử",
+    category: "Momota – Lin Dan",
   },
   {
-    url: "https://www.tiktok.com/@bwf.official/video/7300000000000000006",
-    title: "Đánh đôi: đứng vị trí sao cho đúng",
-    category: "Mẹo kỹ thuật",
+    url: "https://www.tiktok.com/@badminton_vn3/video/7695803337916091668",
+    title: "Momota vs Lin Dan, tứ kết Japan Open 2018 – trận đấu chuyển giao thế hệ",
+    category: "Momota – Lin Dan",
   },
-];
+  {
+    url: "https://www.tiktok.com/@badminton_vn3/video/7690087906559413512",
+    title: "Thời hoàng kim của Kento Momota",
+    category: "Momota",
+  },
+]
 
 export function getVideoId(url: string) {
   return url.match(/\/video\/(\d+)/)?.[1] ?? null;

@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "Kênh có nhận review sản phẩm không?",
-    a: `Có. Thương hiệu và shop vui lòng liên hệ ${site.contactEmail}. Kênh chỉ nhận review khi được dùng thử thật.`,
+    a: `Có. Thương hiệu và shop vui lòng nhắn tin trực tiếp qua TikTok ${site.tiktok.handle}. Kênh chỉ nhận review khi được dùng thử thật.`,
   },
   {
-    q: "Làm sao để gửi clip trận đấu cho kênh?",
-    a: `Nhắn tin trực tiếp qua TikTok ${site.tiktok.handle} hoặc gửi link Google Drive tới ${site.contactEmail}, kèm tên người chơi và sân/giải đấu.`,
+    q: "Video trên kênh lấy từ đâu?",
+    a: "Các video được cắt từ những trận đấu hay tại các giải BWF lớn. Toàn bộ bản quyền trận đấu thuộc về BWF và các đơn vị phát sóng; kênh chỉ biên tập lại để người xem dễ theo dõi.",
   },
 ];
 

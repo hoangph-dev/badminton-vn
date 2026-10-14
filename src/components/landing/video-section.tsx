@@ -14,8 +14,8 @@ export function VideoSection() {
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeading
           eyebrow="Video nổi bật"
-          title="Những trận cầu đáng xem nhất tuần"
-          description="Từ sân phong trào đến giải BWF – pha cầu đẹp, phân tích chiến thuật và mẹo kỹ thuật dễ áp dụng."
+          title="Những trận cầu kinh điển đáng xem nhất"
+          description="Momota, Lee Chong Wei, Lin Dan… được cắt gọn từ các giải BWF lớn, chia theo từng đoạn để dễ xem."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((video) => (

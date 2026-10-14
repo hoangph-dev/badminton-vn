@@ -1,10 +1,12 @@
-import { Play } from "lucide-react";
+"use client";
+
+import Script from "next/script";
 import { getVideoId } from "@/data/videos";
 import { cn } from "@/lib/utils";
 
 /**
- * Nhúng video bằng TikTok Embed Player (iframe, không cần script/API key).
- * `loading="lazy"` để trình duyệt chỉ tải khi video gần vào màn hình.
+ * Nhúng video bằng TikTok Embed chính thức (blockquote + embed.js).
+ * Script tải lười (lazyOnload) và dùng chung cho mọi video trên trang.
  */
 export function TikTokEmbed({
   url,
@@ -18,34 +20,20 @@ export function TikTokEmbed({
   const id = getVideoId(url);
 
   return (
-    <div
-      className={cn(
-        "relative aspect-[9/16] w-full overflow-hidden rounded-2xl bg-brand-ink",
-        className,
-      )}
-    >
-      {id ? (
-        <iframe
-          src={`https://www.tiktok.com/player/v1/${id}?music_info=1&description=1&rel=0`}
-          title={title}
-          loading="lazy"
-          allow="encrypted-media; fullscreen; picture-in-picture"
-          allowFullScreen
-          className="absolute inset-0 size-full border-0"
-        />
-      ) : (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white"
-        >
-          <span className="flex size-14 items-center justify-center rounded-full bg-brand-yellow text-brand-ink">
-            <Play className="size-6 fill-current" />
-          </span>
-          <span className="px-6 text-center text-sm font-medium">{title}</span>
-        </a>
-      )}
+    <div className={cn("flex w-full flex-col items-center", className)}>
+      <blockquote
+        className="tiktok-embed"
+        cite={url}
+        data-video-id={id ?? undefined}
+        style={{ maxWidth: 605, minWidth: 288, margin: 0, width: "100%" }}
+      >
+        <section>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </section>
+      </blockquote>
+      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
     </div>
   );
 }

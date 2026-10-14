@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
 import { Logo } from "./logo";
@@ -12,7 +12,7 @@ export function SiteFooter() {
             Follow để không bỏ lỡ trận nào
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-white/80">
-            {site.schedule}. Highlight, phân tích và mẹo kỹ thuật – miễn phí, ngay trên TikTok.
+            Những trận cầu lông BWF hay nhất được cắt gọn, cập nhật liên tục trên TikTok.
           </p>
           <Button
             asChild
@@ -31,10 +31,12 @@ export function SiteFooter() {
           <div className="text-sm">
             <p className="font-semibold">Hợp tác & quảng cáo</p>
             <a
-              href={`mailto:${site.contactEmail}`}
+              href={site.tiktok.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 text-primary hover:underline"
             >
-              <Mail className="size-4" /> {site.contactEmail}
+              <Send className="size-4" /> Nhắn tin {site.tiktok.handle}
             </a>
           </div>
         </div>

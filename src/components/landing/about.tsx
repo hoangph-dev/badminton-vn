@@ -1,22 +1,22 @@
-import { CalendarDays, Clapperboard, Send } from "lucide-react";
+import { Clapperboard, Send, Trophy } from "lucide-react";
 import { site } from "@/data/site";
 import { SectionHeading } from "./section-heading";
 
 const points = [
   {
-    icon: Clapperboard,
-    title: "Quay tận sân",
-    text: "Kênh trực tiếp mang máy tới các giải phong trào, CLB và sân tập khắp Hà Nội – TP.HCM.",
+    icon: Trophy,
+    title: "Trận đấu đỉnh cao",
+    text: "Chọn lọc từ các giải BWF lớn: Momota, Lee Chong Wei, Lin Dan, Chen Long…",
   },
   {
-    icon: CalendarDays,
-    title: "Đăng đều mỗi ngày",
-    text: site.schedule + ". Highlight cuối tuần tổng hợp những pha hay nhất.",
+    icon: Clapperboard,
+    title: "Cắt gọn, chia phần",
+    text: "Mỗi trận được chia theo từng đoạn (khởi động, 11 điểm đầu, những điểm cuối) để xem nhanh mà không bỏ lỡ pha hay.",
   },
   {
     icon: Send,
-    title: "Gửi clip của bạn",
-    text: "Có pha cầu đẹp? Nhắn kênh qua TikTok hoặc email, clip hay sẽ được lên sóng.",
+    title: "Gợi ý trận muốn xem",
+    text: "Muốn xem trận nào được cắt tiếp? Bình luận hoặc nhắn tin trực tiếp cho kênh trên TikTok.",
   },
 ];
 
@@ -27,8 +27,8 @@ export function About() {
         <div className="[&_p]:text-white/75 [&_p.text-primary]:text-brand-yellow">
           <SectionHeading
             eyebrow="Về kênh"
-            title="Từ sân phong trào tới màn hình của bạn"
-            description="badminton_vn bắt đầu từ một nhóm bạn mê cầu lông, muốn lưu lại những pha cầu đẹp ở sân nhà. Giờ đây kênh là nơi hàng trăm nghìn người chơi phong trào xem, học và chọn đồ."
+            title="Những trận cầu lông hay nhất, cắt gọn cho bạn"
+            description="badminton_vn là kênh của người mê cầu lông, chuyên cắt những trận đấu kinh điển ở các giải BWF lớn. Ngoài xem trận, kênh còn chia sẻ đồ cầu lông mình dùng ở giỏ hàng TikTok Shop."
           />
           <div className="flex flex-wrap gap-2">
             {site.socials.map((s) => (

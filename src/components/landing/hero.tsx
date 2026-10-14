@@ -19,8 +19,8 @@ export function Hero() {
             {site.tiktok.handle} · {site.schedule}
           </p>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-balance md:text-6xl">
-            Highlight cầu lông mỗi ngày.{" "}
-            <span className="text-brand-yellow">Đồ chơi chuẩn dân phong trào.</span>
+            Trận cầu lông BWF kinh điển.{" "}
+            <span className="text-brand-yellow">Cắt gọn cho bạn xem.</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-white/80">{site.description}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -51,7 +51,7 @@ export function Hero() {
             ))}
           </dl>
         </div>
-        <div className="mx-auto w-full max-w-[20rem] rotate-1 rounded-[1.75rem] bg-white/10 p-2 shadow-2xl">
+        <div className="mx-auto w-full max-w-[22rem] rounded-2xl bg-white p-1 shadow-2xl">
           <TikTokEmbed url={featured.url} title={featured.title} />
         </div>
       </div>
