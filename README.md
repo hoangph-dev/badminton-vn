@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# badminton_vn
 
-## Getting Started
+Landing page cho kênh TikTok **badminton_vn** (highlight trận đấu cầu lông) kèm danh sách đồ cầu lông theo mô hình affiliate (Shopee / TikTok Shop).
 
-First, run the development server:
+Stack: Next.js 16 (App Router) · React 19 · Tailwind CSS v4 · shadcn/ui.
+
+## Chạy local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sửa nội dung
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Toàn bộ nội dung nằm trong `src/data/` (tìm các comment `TODO`):
 
-## Learn More
+| File | Nội dung |
+| --- | --- |
+| `src/data/site.ts` | Tên kênh, handle/URL TikTok, mạng xã hội, số liệu hero, lịch đăng, email liên hệ |
+| `src/data/videos.ts` | Danh sách video TikTok (URL dạng `https://www.tiktok.com/@user/video/<id>`). `featured: true` = video ở hero |
+| `src/data/products.ts` | Sản phẩm: danh mục, trình độ, giá, nhận xét, tag, link affiliate Shopee / TikTok Shop |
 
-To learn more about Next.js, take a look at the following resources:
+Ảnh sản phẩm: đặt vào `public/products/` và khai báo `image: "/products/ten-anh.jpg"`. Để trống sẽ hiện ảnh placeholder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Video được nhúng bằng TikTok Embed Player (iframe, không cần API key).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Cấu trúc
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx` – ghép các section của landing page
+- `src/components/landing/` – các section (hero, video, sản phẩm, gợi ý theo trình độ, về kênh, FAQ, footer)
+- `src/components/ui/` – component shadcn/ui
