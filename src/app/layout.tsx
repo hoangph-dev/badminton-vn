@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
+import { MotionProvider } from "@/components/motion/motion-provider";
+import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -27,7 +29,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="vi" className={`${beVietnam.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <MotionProvider>
+          <ScrollProgress />
+          {children}
+        </MotionProvider>
+      </body>
     </html>
   );
 }

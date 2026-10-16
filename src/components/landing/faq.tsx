@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { Reveal } from "@/components/motion/reveal";
 import { site } from "@/data/site";
 import { SectionHeading } from "./section-heading";
 
@@ -26,7 +27,7 @@ export function Faq() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-4">
         <SectionHeading eyebrow="Hỏi đáp" title="Câu hỏi thường gặp" />
-        <div className="divide-y rounded-2xl border bg-card">
+        <Reveal className="divide-y rounded-2xl border bg-card" delay={0.1}>
           {faqs.map((f) => (
             <details key={f.q} className="group px-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold [&::-webkit-details-marker]:hidden">
@@ -36,7 +37,7 @@ export function Faq() {
               <p className="pb-5 text-muted-foreground">{f.a}</p>
             </details>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

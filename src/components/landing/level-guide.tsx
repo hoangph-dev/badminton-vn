@@ -1,4 +1,6 @@
 import { Sparkles, Trophy, Users } from "lucide-react";
+import { HoverLift } from "@/components/motion/hover-lift";
+import { Stagger, StaggerItem } from "@/components/motion/reveal";
 import { levels, products, type Level } from "@/data/products";
 import { SectionHeading } from "./section-heading";
 
@@ -26,12 +28,13 @@ export function LevelGuide() {
           title="Không biết bắt đầu từ đâu?"
           description="Chọn đúng trình độ của bạn – kênh đã lọc sẵn những món đáng tiền nhất."
         />
-        <div className="grid gap-4 md:grid-cols-3">
+        <Stagger className="grid gap-4 md:grid-cols-3">
           {levels.map((level) => {
             const { icon: Icon, description } = levelInfo[level];
             const picks = products.filter((p) => p.level === level).slice(0, 3);
             return (
-              <div key={level} className="rounded-2xl border bg-card p-6">
+              <StaggerItem key={level}>
+                <HoverLift className="h-full rounded-2xl border bg-card p-6">
                 <span className="flex size-11 items-center justify-center rounded-xl bg-accent text-accent-foreground">
                   <Icon className="size-5" />
                 </span>
@@ -46,10 +49,11 @@ export function LevelGuide() {
                     </li>
                   ))}
                 </ul>
-              </div>
+                </HoverLift>
+              </StaggerItem>
             );
           })}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

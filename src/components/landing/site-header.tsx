@@ -3,7 +3,6 @@ import { site } from "@/data/site";
 import { Logo } from "./logo";
 
 const nav = [
-  { href: "#video", label: "Video" },
   { href: "#do-cau-long", label: "Đồ cầu lông" },
   { href: "#ve-kenh", label: "Về kênh" },
 ];

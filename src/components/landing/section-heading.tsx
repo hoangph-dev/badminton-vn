@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/motion/reveal";
+
 export function SectionHeading({
   eyebrow,
   title,
@@ -8,12 +10,12 @@ export function SectionHeading({
   description?: string;
 }) {
   return (
-    <div className="mb-8 max-w-2xl">
+    <Reveal className="mb-8 max-w-2xl">
       <p className="text-sm font-semibold uppercase tracking-wider text-primary">{eyebrow}</p>
       <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-balance md:text-4xl">
         {title}
       </h2>
       {description && <p className="mt-3 text-muted-foreground">{description}</p>}
-    </div>
+    </Reveal>
   );
 }

@@ -6,7 +6,6 @@ import { MobileFollowBar } from "@/components/landing/mobile-follow-bar";
 import { ProductSection } from "@/components/landing/product-section";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteHeader } from "@/components/landing/site-header";
-import { VideoSection } from "@/components/landing/video-section";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
-        <VideoSection />
         <ProductSection />
         <LevelGuide />
         <About />

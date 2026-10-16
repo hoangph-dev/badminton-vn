@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { productCategories, products, type ProductCategory } from "@/data/products";
 import { cn } from "@/lib/utils";
 import { ProductCard } from "./product-card";
@@ -46,21 +48,37 @@ export function ProductSection() {
               aria-selected={active === f}
               onClick={() => setActive(f)}
               className={cn(
-                "shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors",
-                active === f
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "bg-background hover:bg-muted",
+                "relative shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+                active === f ? "border-primary text-primary-foreground" : "bg-background hover:bg-muted",
               )}
             >
-              {f}
+              {active === f && (
+                <m.span
+                  layoutId="active-filter"
+                  className="absolute inset-0 rounded-full bg-primary"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                />
+              )}
+              <span className="relative">{f}</span>
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-          {list.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <m.div layout className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          <AnimatePresence mode="popLayout" initial={false}>
+            {list.map((product) => (
+              <m.div
+                key={product.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              >
+                <ProductCard product={product} />
+              </m.div>
+            ))}
+          </AnimatePresence>
+        </m.div>
       </div>
     </section>
   );

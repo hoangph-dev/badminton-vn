@@ -1,5 +1,6 @@
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/reveal";
 import { site } from "@/data/site";
 import { Logo } from "./logo";
 
@@ -7,7 +8,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t pb-24 sm:pb-0">
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <div className="rounded-3xl bg-brand px-6 py-10 text-center text-white md:py-14">
+        <Reveal direction="scale" className="rounded-3xl bg-brand px-6 py-10 text-center text-white md:py-14">
           <h2 className="text-3xl font-extrabold tracking-tight text-balance md:text-4xl">
             Follow để không bỏ lỡ trận nào
           </h2>
@@ -22,7 +23,7 @@ export function SiteFooter() {
               Follow {site.tiktok.handle}
             </a>
           </Button>
-        </div>
+        </Reveal>
         <div className="mt-12 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Logo />

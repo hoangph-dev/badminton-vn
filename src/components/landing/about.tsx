@@ -1,4 +1,5 @@
 import { Clapperboard, Send, Trophy } from "lucide-react";
+import { Stagger, StaggerItem } from "@/components/motion/reveal";
 import { site } from "@/data/site";
 import { SectionHeading } from "./section-heading";
 
@@ -44,9 +45,9 @@ export function About() {
             ))}
           </div>
         </div>
-        <ul className="space-y-4">
+        <Stagger as="ul" className="space-y-4" stagger={0.12}>
           {points.map(({ icon: Icon, title, text }) => (
-            <li key={title} className="flex gap-4 rounded-2xl bg-white/5 p-5">
+            <StaggerItem as="li" key={title} className="flex gap-4 rounded-2xl bg-white/5 p-5">
               <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink">
                 <Icon className="size-5" />
               </span>
@@ -54,9 +55,9 @@ export function About() {
                 <h3 className="font-bold">{title}</h3>
                 <p className="mt-1 text-sm text-white/70">{text}</p>
               </div>
-            </li>
+            </StaggerItem>
           ))}
-        </ul>
+        </Stagger>
       </div>
     </section>
   );

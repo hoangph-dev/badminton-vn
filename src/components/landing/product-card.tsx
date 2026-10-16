@@ -4,13 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import type { Product } from "@/data/products";
+import { HoverLift } from "@/components/motion/hover-lift";
 import { LogoMark } from "./logo";
 
 export function ProductCard({ product }: { product: Product }) {
   const { tiktokShop } = product.links;
 
   return (
-    <Card id={`sp-${product.id}`} className="scroll-mt-20 gap-3 pt-0">
+    <HoverLift className="h-full">
+    <Card id={`sp-${product.id}`} className="h-full scroll-mt-20 gap-3 pt-0">
       <div className="relative aspect-square bg-secondary">
         {product.image ? (
           <Image
@@ -60,5 +62,6 @@ export function ProductCard({ product }: { product: Product }) {
         )}
       </CardFooter>
     </Card>
+    </HoverLift>
   );
 }
